@@ -1,3 +1,4 @@
+@Library("shared-library") _
 pipeline {
   agent {label 'linux'}
   options {
@@ -7,7 +8,7 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
-        echo "Hello"
+        helloWorld(name:"robin",dayOfWeek:"thursday");
       }
     }
   }
